@@ -13,6 +13,9 @@
 		DDBBD93F24257AD500D64191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBBD93D24257AD500D64191 /* Main.storyboard */; };
 		DDBBD94124257AD900D64191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBBD94024257AD900D64191 /* Assets.xcassets */; };
 		DDBBD94424257AD900D64191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBBD94224257AD900D64191 /* LaunchScreen.storyboard */; };
+		DDBBD94D24261D7100D64191 /* EffectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD94C24261D7100D64191 /* EffectButtonView.swift */; };
+		DDBBD9502426222100D64191 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD94F2426222100D64191 /* HelperViewController.swift */; };
+		DDBBD952242622F000D64191 /* HelpSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD951242622F000D64191 /* HelpSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		DDBBD94024257AD900D64191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDBBD94324257AD900D64191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDBBD94524257AD900D64191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDBBD94C24261D7100D64191 /* EffectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectButtonView.swift; sourceTree = "<group>"; };
+		DDBBD94F2426222100D64191 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
+		DDBBD951242622F000D64191 /* HelpSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		DDBBD93624257AD500D64191 /* Carry On */ = {
 			isa = PBXGroup;
 			children = (
+				DDBBD94E2426221200D64191 /* Controllers */,
+				DDBBD94B24261D3200D64191 /* Views */,
 				DDBBD93724257AD500D64191 /* AppDelegate.swift */,
 				DDBBD93924257AD500D64191 /* SceneDelegate.swift */,
-				DDBBD93B24257AD500D64191 /* ViewController.swift */,
 				DDBBD93D24257AD500D64191 /* Main.storyboard */,
 				DDBBD94024257AD900D64191 /* Assets.xcassets */,
 				DDBBD94224257AD900D64191 /* LaunchScreen.storyboard */,
 				DDBBD94524257AD900D64191 /* Info.plist */,
 			);
 			path = "Carry On";
+			sourceTree = "<group>";
+		};
+		DDBBD94B24261D3200D64191 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDBBD94C24261D7100D64191 /* EffectButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DDBBD94E2426221200D64191 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDBBD93B24257AD500D64191 /* ViewController.swift */,
+				DDBBD94F2426222100D64191 /* HelperViewController.swift */,
+				DDBBD951242622F000D64191 /* HelpSearchViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBBD952242622F000D64191 /* HelpSearchViewController.swift in Sources */,
 				DDBBD93C24257AD500D64191 /* ViewController.swift in Sources */,
+				DDBBD94D24261D7100D64191 /* EffectButtonView.swift in Sources */,
 				DDBBD93824257AD500D64191 /* AppDelegate.swift in Sources */,
 				DDBBD93A24257AD500D64191 /* SceneDelegate.swift in Sources */,
+				DDBBD9502426222100D64191 /* HelperViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2G96VK3N8N;
 				INFOPLIST_FILE = "Carry On/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2G96VK3N8N;
 				INFOPLIST_FILE = "Carry On/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
