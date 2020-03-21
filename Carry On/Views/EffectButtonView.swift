@@ -59,61 +59,33 @@ class ButtonView: UIButton {
     // TODO: Try to offload touch event into exposed IBAction?
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-//        if(!requestRunning) {
-            animShrink()
-//        }
+        animShrink()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-//        if(requestRunning){
-//            return
-//        }
         animReset()
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-//        if(requestRunning){
-//            return
-//        }
         animReset()
     }
 
     public func animShrink(){
-//        animRunning = true
-//        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut,animations: {
-//            self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-//            //self.frontLayer.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0.25).cgColor
-//        }, completion: { result in
-//            self.animRunning = false
-//            if(self.resetAnim){
-//                self.animReset()
-//            }
-//        })
-        
+
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut,animations: {
             self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         })
+
     }
     
     public func animReset(){
-//        if(animRunning){
-//            resetAnim = true
-//        }else{
-//            resetAnim = false
-//            UIView.animate(withDuration: 0.14, animations: {
-//                self.transform = CGAffineTransform.identity
-//                //self.frontLayer.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0).cgColor
-//            })
-//        }
-        
-        
+
         UIView.animate(withDuration: 0.14, animations: {
             self.transform = CGAffineTransform.identity
         })
 
-        
     }
 
     

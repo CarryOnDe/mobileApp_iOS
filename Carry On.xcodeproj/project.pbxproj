@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		DDBBD94D24261D7100D64191 /* EffectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD94C24261D7100D64191 /* EffectButtonView.swift */; };
 		DDBBD9502426222100D64191 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD94F2426222100D64191 /* HelperViewController.swift */; };
 		DDBBD952242622F000D64191 /* HelpSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD951242622F000D64191 /* HelpSearchViewController.swift */; };
+		DDBBD9552426312A00D64191 /* HelpRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBD9542426312A00D64191 /* HelpRequestModel.swift */; };
+		DDC3A25E242638EB0042FACB /* HelpRequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC3A25D242638EB0042FACB /* HelpRequestDetailViewController.swift */; };
+		DDE27FA02426AB980099720C /* BadgeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DDE27F9F2426AB980099720C /* BadgeSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		DDBBD94C24261D7100D64191 /* EffectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectButtonView.swift; sourceTree = "<group>"; };
 		DDBBD94F2426222100D64191 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		DDBBD951242622F000D64191 /* HelpSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSearchViewController.swift; sourceTree = "<group>"; };
+		DDBBD9542426312A00D64191 /* HelpRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestModel.swift; sourceTree = "<group>"; };
+		DDC3A25D242638EB0042FACB /* HelpRequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE27FA02426AB980099720C /* BadgeSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 		DDBBD93624257AD500D64191 /* Carry On */ = {
 			isa = PBXGroup;
 			children = (
+				DDBBD9532426311300D64191 /* Models */,
 				DDBBD94E2426221200D64191 /* Controllers */,
 				DDBBD94B24261D3200D64191 /* Views */,
 				DDBBD93724257AD500D64191 /* AppDelegate.swift */,
@@ -88,8 +95,17 @@
 				DDBBD93B24257AD500D64191 /* ViewController.swift */,
 				DDBBD94F2426222100D64191 /* HelperViewController.swift */,
 				DDBBD951242622F000D64191 /* HelpSearchViewController.swift */,
+				DDC3A25D242638EB0042FACB /* HelpRequestDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DDBBD9532426311300D64191 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDBBD9542426312A00D64191 /* HelpRequestModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +124,9 @@
 			dependencies = (
 			);
 			name = "Carry On";
+			packageProductDependencies = (
+				DDE27F9F2426AB980099720C /* BadgeSwift */,
+			);
 			productName = "Carry On";
 			productReference = DDBBD93424257AD500D64191 /* Carry On.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +155,9 @@
 				Base,
 			);
 			mainGroup = DDBBD92B24257AD500D64191;
+			packageReferences = (
+				DDE27F9E2426AB980099720C /* XCRemoteSwiftPackageReference "swift-badge" */,
+			);
 			productRefGroup = DDBBD93524257AD500D64191 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +189,8 @@
 				DDBBD93C24257AD500D64191 /* ViewController.swift in Sources */,
 				DDBBD94D24261D7100D64191 /* EffectButtonView.swift in Sources */,
 				DDBBD93824257AD500D64191 /* AppDelegate.swift in Sources */,
+				DDC3A25E242638EB0042FACB /* HelpRequestDetailViewController.swift in Sources */,
+				DDBBD9552426312A00D64191 /* HelpRequestModel.swift in Sources */,
 				DDBBD93A24257AD500D64191 /* SceneDelegate.swift in Sources */,
 				DDBBD9502426222100D64191 /* HelperViewController.swift in Sources */,
 			);
@@ -368,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDE27F9E2426AB980099720C /* XCRemoteSwiftPackageReference "swift-badge" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/swift-badge.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDE27F9F2426AB980099720C /* BadgeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDE27F9E2426AB980099720C /* XCRemoteSwiftPackageReference "swift-badge" */;
+			productName = BadgeSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDBBD92C24257AD500D64191 /* Project object */;
 }
